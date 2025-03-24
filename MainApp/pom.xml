@@ -1,0 +1,17 @@
+<!DOCTYPE dependency SYSTEM "pom.xml">
+//JMonkey Lib
+<dependency>
+    <groupId>org.jmonkeyengine</groupId>
+    <artifactId>jme3-core</artifactId>
+    <version>3.7.0-stable</version>
+</dependency>
+<dependency>
+    <groupId>org.jmonkeyengine</groupId>
+    <artifactId>jme3-desktop</artifactId>
+    <version>3.7.0-stable</version>
+</dependency>
+<dependency>
+    <groupId>org.jmonkeyengine</groupId>
+    <artifactId>jme3-lwjgl3</artifactId>
+    <version>3.7.0-stable</version>
+</dependency>
