@@ -41,6 +41,10 @@ public class MainApp extends SimpleApplication{
 		public void OnAction(String name,Boolean isPressed,float tpf) {//Adding Action
 			if(name.equals("Rotate")&& !isPressed)rotationEnabled=!rotationEnabled;//Enabling Obj Rotation
 		}
+		public void onAnalog(String name,int val,float tpf) {
+			if(name.equals("left"))rotation.rotate(0,-tpf,0);
+			else if(name.equals("right"))rotation.rotate(0,+tpf,0);
+		}
 	}
 
 	@Override
