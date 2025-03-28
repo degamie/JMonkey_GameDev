@@ -1,17 +1,37 @@
 package MainApp;
 
 import com.jme3.app.SimpleApplication;
+import com.jme3.app.state.AppState;
+import com.jme3.app.state.ConstantVerifierState;
+import com.jme3.audio.AudioListenerState;
 import com.jme3.input.controls.ActionListener;
 import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
+import com.jme3.renderer.Renderer;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
 public class MainApp extends SimpleApplication{
 	public MainApp() {//Default Constructor Declare within its Param
-		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new DebugKeysAppStaate(),new ConstantVerifierState());
+		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
 	}
+	
+	@Override
+	public void simpleInitApp() {
+		System.out.println(statsAppState+FlyCamAppState+AudioListenerState+AppState+ConstantVerifierState);
+		
+		
+	}
+	public Renderer renderstate;//Obj declare
+	public void applyRenderState(Renderer rendererstate) {//applyRenderState func
+		rendererstate.BlendMode()=rendererstate;//Blending mode
+		System.out.println(rendererstate);//Printing rendererstate
+		
+	}
+
+	
+	
 	public final static void Main(String [] args) {
 		MainApp main=new MainApp();
 		AppSettings settings=new AppSettings(true);
@@ -46,11 +66,7 @@ public class MainApp extends SimpleApplication{
 			else if(name.equals("right"))rotation.rotate(0,+tpf,0);
 		}
 	}
+	
 
-	@Override
-	public void simpleInitApp() {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
