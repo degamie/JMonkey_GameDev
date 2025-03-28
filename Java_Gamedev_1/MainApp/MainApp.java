@@ -13,16 +13,23 @@ import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
 public class MainApp extends SimpleApplication{
+	public MainApp() {//Default Constructor Declare within its Param
+		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
+	}
+	
+	@Override
+	public void simpleInitApp() {
+		System.out.println(statsAppState+FlyCamAppState+AudioListenerState+AppState+ConstantVerifierState);
+		
+		
+	}
 	public Renderer renderstate;//Obj declare
 	public void applyRenderState(Renderer rendererstate) {//applyRenderState func
 		rendererstate.BlendMode()=rendererstate;//Blending mode
 		System.out.println(rendererstate);//Printing rendererstate
 		
 	}
-	public MainApp() {//Default Constructor Declare within its Param
-		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
-	}
-	
+
 	
 	
 	public final static void Main(String [] args) {
@@ -61,10 +68,5 @@ public class MainApp extends SimpleApplication{
 	}
 	
 
-	@Override
-	public void simpleInitApp() {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
