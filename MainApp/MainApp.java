@@ -9,10 +9,12 @@ import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
 import com.jme3.renderer.Renderer;
 import com.jme3.scene.Geometry;
+import com.jme3.scene.Mesh;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
 public class MainApp extends SimpleApplication{
+	public Mesh mesh;
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
 	}
@@ -24,14 +26,14 @@ public class MainApp extends SimpleApplication{
 		
 	}
 	public Renderer renderstate;//Obj declare
+	public Mesh getMesh(Mesh mesh) {//getMesh Func declare
+		return mesh;//Printing Mesh Val
+	}
 	public void applyRenderState(Renderer rendererstate) {//applyRenderState func
 		rendererstate.BlendMode()=rendererstate;//Blending mode
 		System.out.println(rendererstate);//Printing rendererstate
 		
 	}
-
-	
-	
 	public final static void Main(String [] args) {
 		MainApp main=new MainApp();
 		AppSettings settings=new AppSettings(true);
@@ -66,7 +68,4 @@ public class MainApp extends SimpleApplication{
 			else if(name.equals("right"))rotation.rotate(0,+tpf,0);
 		}
 	}
-	
-
-
 }
