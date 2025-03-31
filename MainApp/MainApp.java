@@ -6,6 +6,7 @@ import com.jme3.app.state.ConstantVerifierState;
 import com.jme3.audio.AudioListenerState;
 import com.jme3.input.controls.ActionListener;
 import com.jme3.material.Material;
+import com.jme3.material.RenderState;
 import com.jme3.math.ColorRGBA;
 import com.jme3.renderer.Renderer;
 import com.jme3.scene.Geometry;
@@ -14,6 +15,7 @@ import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
 public class MainApp extends SimpleApplication{
+	public Renderer rendererstate;
 	public Mesh mesh;
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
@@ -29,9 +31,12 @@ public class MainApp extends SimpleApplication{
 	public Mesh getMesh(Mesh mesh) {//getMesh Func declare
 		return mesh;//Printing Mesh Val
 	}
-	public void applyRenderState(Renderer rendererstate) {//applyRenderState func
+	public void applyRenderState() {//applyRenderState func
 		rendererstate.BlendMode()=rendererstate;//Blending mode
 		System.out.println(rendererstate);//Printing rendererstate
+		
+	}
+	public RenderState.BlendMode getBlendMode(RenderState renderState){
 		
 	}
 	public final static void Main(String [] args) {
