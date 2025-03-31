@@ -13,8 +13,12 @@ import com.jme3.scene.Mesh;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
-public class MainApp extends SimpleApplication{
-	public Mesh mesh;
+public class MainApp extends SimpleApplication{//inherting SimpleApplication
+	public Renderer rendererstate;//RenderState Declare
+	public Mesh mesh;//mesh obj Declare
+	public RenderState.BlendMode getBlendMode(RenderState renderState){//BlendMode Input Method Declare
+		return renderState.BlendMode(mesh);//printing Mesh's RenderState
+	}
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
 	}
