@@ -14,31 +14,33 @@ import com.jme3.scene.Mesh;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
-public class MainApp extends SimpleApplication{
-	public Renderer rendererstate;
-	public Mesh mesh;
+public class MainApp extends SimpleApplication{//inherting SimpleApplication
+	public Renderer rendererstate;//RenderState Declare
+	public Mesh mesh;//mesh obj Declare
+		return renderState.BlendMode(mesh);//printing Mesh's RenderState
+	
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
 	}
-	
+	public Mesh setMesh(Mesh mesh,RenderState rendererstate, FlyCamAppState flyCamStateState){//setMesh Func declare
+		this.mesh=mesh;//binding Mesh and its Propert
+		this.RenderState=rendererstate;
+		this.FlyCamAppState=flyCamState;
+	}
 	@Override
 	public void simpleInitApp() {
 		System.out.println(statsAppState+FlyCamAppState+AudioListenerState+AppState+ConstantVerifierState);
-		
-		
 	}
-	public Renderer renderstate;//Obj declare
 	public Mesh getMesh(Mesh mesh) {//getMesh Func declare
 		return mesh;//Printing Mesh Val
 	}
-	public void applyRenderState() {//applyRenderState func
-		rendererstate.BlendMode()=rendererstate;//Blending mode
-		System.out.println(rendererstate);//Printing rendererstate
+
+	public void applyRenderState(RendererState rendererstate) {//applyRenderState func
+		System.out.println(rendererstate.mesh);//Printing rendererstate
 		
 	}
-	public RenderState.BlendMode getBlendMode(RenderState renderState){
-		
-	}
+}
+
 	public final static void Main(String [] args) {
 		MainApp main=new MainApp();
 		AppSettings settings=new AppSettings(true);
