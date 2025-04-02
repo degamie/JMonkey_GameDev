@@ -6,6 +6,7 @@ import com.jme3.app.state.ConstantVerifierState;
 import com.jme3.audio.AudioListenerState;
 import com.jme3.input.controls.ActionListener;
 import com.jme3.material.Material;
+import com.jme3.material.RenderState;
 import com.jme3.math.ColorRGBA;
 import com.jme3.renderer.Renderer;
 import com.jme3.scene.Geometry;
@@ -16,28 +17,30 @@ import com.jme3.system.AppSettings;
 public class MainApp extends SimpleApplication{//inherting SimpleApplication
 	public Renderer rendererstate;//RenderState Declare
 	public Mesh mesh;//mesh obj Declare
-	public RenderState.BlendMode getBlendMode(RenderState renderState){//BlendMode Input Method Declare
 		return renderState.BlendMode(mesh);//printing Mesh's RenderState
-	}
+	
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
 	}
-	
+	public Mesh setMesh(Mesh mesh,RenderState rendererstate, FlyCamAppState flyCamStateState){//setMesh Func declare
+		this.mesh=mesh;//binding Mesh and its Propert
+		this.RenderState=rendererstate;
+		this.FlyCamAppState=flyCamState;
+	}
 	@Override
 	public void simpleInitApp() {
 		System.out.println(statsAppState+FlyCamAppState+AudioListenerState+AppState+ConstantVerifierState);
-		
-		
 	}
-	public Renderer renderstate;//Obj declare
 	public Mesh getMesh(Mesh mesh) {//getMesh Func declare
 		return mesh;//Printing Mesh Val
 	}
-	public void applyRenderState(Renderer rendererstate) {//applyRenderState func
-		rendererstate.BlendMode()=rendererstate;//Blending mode
-		System.out.println(rendererstate);//Printing rendererstate
+
+	public void applyRenderState(RendererState rendererstate) {//applyRenderState func
+		System.out.println(rendererstate.mesh);//Printing rendererstate
 		
 	}
+}
+
 	public final static void Main(String [] args) {
 		MainApp main=new MainApp();
 		AppSettings settings=new AppSettings(true);
