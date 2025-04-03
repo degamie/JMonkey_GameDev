@@ -1,5 +1,7 @@
 package MainApp;
 
+import javax.swing.JList;
+
 import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.AppState;
 import com.jme3.app.state.ConstantVerifierState;
@@ -8,7 +10,9 @@ import com.jme3.input.controls.ActionListener;
 import com.jme3.material.Material;
 import com.jme3.material.RenderState;
 import com.jme3.math.ColorRGBA;
+import com.jme3.post.SceneProcessor;
 import com.jme3.renderer.Renderer;
+import com.jme3.renderer.ViewPort;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Mesh;
 import com.jme3.scene.Node;
@@ -22,11 +26,20 @@ public class MainApp extends SimpleApplication{//inherting SimpleApplication
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
 	}
+	//Ninth Commit
 	public Mesh setMesh(Mesh mesh,RenderState rendererstate, FlyCamAppState flyCamStateState){//setMesh Func declare
 		this.mesh=mesh;//binding Mesh and its Propert
 		this.RenderState=rendererstate;
 		this.FlyCamAppState=flyCamState;
 	}
+	public String notifyReShape(ViewPort viewport,int  width,int height) {
+		List<SceneProcessor>processor=new JList<>();
+		SceneProcessor[] proc;
+		for(SceneProcessor process:proc) {
+			if(!process.initilize())process.initilize(this,viewport);
+			else process.reshape(viewport, width, height);
+	}
+		
 	@Override
 	public void simpleInitApp() {
 		System.out.println(statsAppState+FlyCamAppState+AudioListenerState+AppState+ConstantVerifierState);
