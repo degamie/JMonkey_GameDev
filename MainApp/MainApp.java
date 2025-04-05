@@ -26,6 +26,9 @@ public class MainApp extends SimpleApplication{//inherting SimpleApplication
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
 	}
+	public void setLineWidth(String LineWidth) {
+		this.LineWidth=LineWidth;
+	}
 	//Ninth Commit
 	public Mesh setMesh(Mesh mesh,RenderState rendererstate, FlyCamAppState flyCamStateState){//setMesh Func declare
 		this.mesh=mesh;//binding Mesh and its Propert
