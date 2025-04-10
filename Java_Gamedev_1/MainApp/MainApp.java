@@ -19,12 +19,16 @@ import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
 public class MainApp extends SimpleApplication{//inherting SimpleApplication
+	public String LineWidth;
 	public Renderer rendererstate;//RenderState Declare
 	public Mesh mesh;//mesh obj Declare
 		return renderState.BlendMode(mesh);//printing Mesh's RenderState
 	
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
+	}
+	public void setLineWidth(String LineWidth) {
+		this.LineWidth=LineWidth;
 	}
 	//Ninth Commit
 	public Mesh setMesh(Mesh mesh,RenderState rendererstate, FlyCamAppState flyCamStateState){//setMesh Func declare
@@ -38,7 +42,14 @@ public class MainApp extends SimpleApplication{//inherting SimpleApplication
 		for(SceneProcessor process:proc) {
 			if(!process.initilize())process.initilize(this,viewport);
 			else process.reshape(viewport, width, height);
-	}
+	}}
+	public void setEnabled(String enabled) {
+		super.setEnabled(enable);
+		if(enabeled) {
+			thos.app.getRootNode(get(x));
+			this.app.update();
+		}
+		
 		
 	@Override
 	public void simpleInitApp() {
