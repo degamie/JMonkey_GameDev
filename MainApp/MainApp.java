@@ -23,6 +23,9 @@ public class MainApp extends SimpleApplication{//inherting SimpleApplication
 	public Renderer rendererstate;//RenderState Declare
 	public Mesh mesh;//mesh obj Declare
 		return renderState.BlendMode(mesh);//printing Mesh's RenderState
+		public void setRendererState(Renderer rendererstate) {
+			this.rendererstate=rendererState;
+		}
 	
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
