@@ -1,5 +1,5 @@
 package MainApp;
 
-public class ScenePerformer {
+public class SceneCaster {
 	public ScenePerformer scenePerformer;
 }
