@@ -14,6 +14,9 @@ public class LevelManagment extends SimpleApplication {
 	lvlMngmt.add(lvel5);
 	int lvl=0;
 	lvlMngmt.get(lvl).load();
+	public String setLvel(int lvl) {//binding Level
+		this.lvl=lvl;
+	}
 	public String getLvel(ArrayList<LevelManagingClass>lvlMngmt,int lvl) {
 		return "Level:"+lvlMngmt+lvl;
 	}
