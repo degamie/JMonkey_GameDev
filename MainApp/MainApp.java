@@ -23,6 +23,7 @@ public class MainApp extends SimpleApplication{//inherting SimpleApplication
 	public Renderer rendererstate;//RenderState Declare
 	public Mesh mesh;//mesh obj Declare
 		return renderState.BlendMode(mesh);//printing Mesh's RenderState
+		public String getRendererState(Renderer rendererstate) {return rendererState;}//Fetching RendererState
 		public void setRendererState(Renderer rendererstate) {
 			this.rendererstate=rendererState;
 		}
