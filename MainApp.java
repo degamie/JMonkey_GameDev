@@ -31,6 +31,9 @@ public class MainApp extends SimpleApplication{//inherting SimpleApplication
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
 	}
+	public String getLineWidth(String LineWidth) {
+		return LineWidth;
+	}
 	public void setLineWidth(String LineWidth) {
 		this.LineWidth=LineWidth;
 	}
