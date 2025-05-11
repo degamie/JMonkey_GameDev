@@ -17,6 +17,9 @@ public class ModeRenderer {//ModeRenderer Class declare
 	public String getModel(Model model) {//fetching Model
 		return model;//Printing Model
 	}
+	public void setMaterial(Material mat) {//Binding Material
+		this.mat=mat;
+	}
 	public String getMaterial(Material mat) {//fetching Material
 		return mat;
 	}
