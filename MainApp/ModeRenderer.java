@@ -33,6 +33,9 @@ public class ModeRenderer {//ModeRenderer Class declare
 	ColorRGBA BlueColor=mat.setColor("Ambient"ColorRGBA.Blue);//Setting The Material's Col
 	mat.setColor("Diffuse",ColorRGBA.Blue);//Diffusing Material
 	spatial.setMaterial(mat);//Spatial's Material  set declare
+	public void setBlueColor(ColorRGBA BlueColor) {
+		this.BlueColor=BlueColor;
+	}
 	public String getBlueColor(ColorRGBA BlueColor) {//Fetching BlueColor 
 		return BlueColor;
 	}
