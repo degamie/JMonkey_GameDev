@@ -3,6 +3,10 @@ package MainApp;
 public class Audio {//Class Declare
 	public float speed=0.0f;	//speed initailize
 	public Audio audio;//Audio Obj declare
+	public Audio(Audio audio,float Speed) {
+		this.audio=audio;
+		this.speed=Speed;
+	}
 	public Audio fastForward(float speed,Audio audio) {//fastForward funct declare 
 		if(speed==0)return 0;//Base cond
 		while(speed!=0) {//Iterating Through speed
