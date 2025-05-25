@@ -24,5 +24,13 @@ public class Audio {//Class Declare
 	public  String playAudio() {//Playing the Audio  
 		public audio.play();
 	}
+	public Integer OnStart(Audio audio,float speed) {
+		if(speed==0)return speed;
+		while(speed!=0) {
+			if(speed>0) {
+				speed+=playAudio();
+			}else speed=0;
+		}return speed;
+	}
 
 }
