@@ -4,9 +4,11 @@ import com.jme3.app.SimpleApplication;
 
 public class LevelManagment extends SimpleApplication {
 	public final Node rootNode;
-	public Node localRootNode;
-	public void setRootNode(Node rootNode) {this.rootNode=rootNode;}//Binding rootNode inLvl
+	public Node localRootNode; 
 	public String getRootNode(Node rootNode) {return rootNode;}//Fetching rootNode
+	public void setRootNode(Node rootNode) {//Binding RootNode
+		this.rootNode=rootNode;
+	}
 
 	
 	ArrayList<LevelManagingClass>lvlMngmt=new ArrayList<>();
