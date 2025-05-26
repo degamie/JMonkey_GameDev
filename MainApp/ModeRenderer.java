@@ -12,7 +12,10 @@ public class ModeRenderer {//ModeRenderer Class declare
 	public void setAssetManager(AssetManager assetManager) {this.assetManager=assetManager;}//Binding AssetManager
 	
 	public String getAssetManager(AssetManager assetManager) {return assetManager;}//Fetching AssetManager
-	
+	public void setModel(Model model) {this.model=model;}//Binding model
+	public void setModel(Model model) {
+		this.model=model;
+	}
 	public String getModel(Model model) {
 		return model;
 	}
