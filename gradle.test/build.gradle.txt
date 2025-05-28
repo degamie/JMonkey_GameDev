@@ -1,0 +1,9 @@
+apply plugin:'java'
+apply plugin:'application'
+ext.jmeVersion="[3.1,)"
+mainClassName="com.Java_Gamedev_1.MainApp.main"
+dependencies{
+    compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-lwjgl:$jmeVersion"
+}
