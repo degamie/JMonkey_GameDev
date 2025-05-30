@@ -8,5 +8,8 @@ public class GuiNode {
 	public String getGuiNode(GuiNode guiNode) {
 		return guiNode;
 	}
+	public String InitGuiNode(GuiNode guiNode) {
+		if(guiNode.equals(null))return guiNode;
+	}
 
 }
