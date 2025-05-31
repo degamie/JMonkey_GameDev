@@ -1,0 +1,16 @@
+public class bank extends Player implements Sectors{
+	public Sectors sectors;
+	public Player player=new Player();
+	public Integer cp;
+	public Integer sp; 
+	public Bank bank;
+	public Integer onProfit(Integer amt){
+		if(amt==0)return 0;
+		while(amt!=0){
+			if(sp>cp)amt=sp-cp;
+			else amt=cp-sp;
+	}
+	amt+=customer.stocks();
+	player.stocks()=sectors.profit();
+}return amt;
+	
