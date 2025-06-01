@@ -1,1 +1,5 @@
-public interface Sectors {}//To be Implemented
+public interface Sectors {
+	public Sectors sectors;
+	public void Profit();
+	public String IT();
+}
