@@ -9,8 +9,6 @@ public class LevelManagment extends SimpleApplication {
 	public void setRootNode(Node rootNode) {//Binding RootNode
 		this.rootNode=rootNode;
 	}
-
-	
 	ArrayList<LevelManagingClass>lvlMngmt=new ArrayList<>();
 	lvlMngmt.add(lvel1);
 	lvlMngmt.add(lvel2);
