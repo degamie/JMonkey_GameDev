@@ -9,6 +9,11 @@ public class ModeRenderer {//ModeRenderer Class declare
 	AssetManager assetManager=new AssetManager();//AssetManager obj declare
 	Spatial spatial=assetManager.loadModel("Models/home.j3e"); //Loading Model 
 	Material mat=new Material(assetManager,"Lighting.j3d");//Material Obj declare
+	public ModeRenderer(AssetManager assetManager,Spatial spatial,Material mat){
+		this.assetManager=assetManager;
+		this.spatial=spatial;
+		this.mat=mat;
+	}
 	public void setAssetManager(AssetManager assetManager) {this.assetManager=assetManager;}//Binding AssetManager
 	
 	public String getAssetManager(AssetManager assetManager) {return assetManager;}//Fetching AssetManager
