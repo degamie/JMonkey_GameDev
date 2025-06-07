@@ -14,6 +14,10 @@ public class MainMenuScreen extends SimpleApplication {
 		return guiNode;
 	}
 	public Screen display=new Screen(guiNode);
+	public MainMenuScreen(Screen screen,GuiNode guinode,Screen display) {
+		this.screen=screen;
+		this.display=display;
+		this.guiNode=guinode;}
 	public  Menu elem1=new Menu(screen,new Vector2(0,0);
 	public  Menu elem2=new Menu(screen,new Vector2(0,0);
 	public  Menu elem3=new Menu(screen,new Vector2(0,0);
