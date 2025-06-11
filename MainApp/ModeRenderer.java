@@ -22,6 +22,9 @@ public class ModeRenderer {//ModeRenderer Class declare
 	public String getMaterial(Material mat) {//fetching Material
 		return mat;
 	}
+	public string setMaterial(Material mat) {
+		this.mat=mat;
+	}
 
 	mat.setBoolean("UserMaterial Colors",true);//Setting Boolean Expression
 	ColorRGBA BlueColor=mat.setColor("Ambient"ColorRGBA.Blue);//Setting The Material's Col
