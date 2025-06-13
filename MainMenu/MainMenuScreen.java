@@ -10,17 +10,37 @@ public class MainMenuScreen extends GuiNode{}//Inheriting Menu's GuiNode
 public class MainMenuScreen extends SimpleApplication {
 	Screen screen=new Screen(this);
 	GuiNode guinode=new GuiNode(this);
+	public class MainMenu extends LevelManagement{//Inheriting LevelManagement class
+		public MainMenu mainmenu=new MainMenu();//Obj Declare
+	}
+	public class MainMenuScreen implements Settings{//Inheriting Settings Interface
+		//Methods To  Be Implemented
+		@Override 
+		public void onPlayAudio(Audio audio){;}//OnPlay Audio
+		@Override 
+		public String connect(NetwrokInfo networkinfo){;}//Online Social Media's Connection method declare
+		@Override 
+		public String ScreenDisplay(MainMenuScreen mainmenuscreen){;}//ScreenDisplay Method declare
+		@Override 
+		public String LevelDisplay(LevelManagement levelmanagement){;}//LevelDisplay methods declare
+	}
+
 	public String getGuiNode(GuiNode guiNode) {
 		return guiNode;
 	}
 	public Screen display=new Screen(guiNode);
+	public MainMenuScreen(Screen screen,GuiNode guinode,Screen display) {
+		this.screen=screen;
+		this.display=display;
+		this.guiNode=guinode;}
 	public  Menu elem1=new Menu(screen,new Vector2(0,0);
 	public  Menu elem2=new Menu(screen,new Vector2(0,0);
 	public  Menu elem3=new Menu(screen,new Vector2(0,0);
 	
 	public  Menu elem4=new Menu(screen,new Vector2(0,0);
 
-	public int width=0;public int Height=0;//Height and Width initializing
+	public int width=0;public int Height=0;//Height and Width initializing\
+
 
 	guiNode.addControl(screen);//Adding Screen's Control
 //	Menu subElement=new Menu(screen,new Vector2(0,0),
@@ -66,4 +86,6 @@ public class MainMenuScreen extends SimpleApplication {
 		 return display;//Printing Display
 	}
 	}
+	
+	
 //extends SimpleAp
