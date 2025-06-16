@@ -2,6 +2,9 @@ package MainMenu;
 
 public class GuiNode {
 	public GuiNode guiNode;
+	public String setguiNode(GuiNode guinode){
+		this.guiNode=guiNode;
+	}
 	public GuiNode(GuiNode guiNode) {
 		this.guiNode=guiNode;
 	}
