@@ -1,0 +1,4 @@
+public interface Settings{
+    public String onPlayAudio(Audio audio);
+    public String OnShowGraphics(Graphics graphics);
+}
