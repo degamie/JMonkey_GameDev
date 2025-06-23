@@ -5,10 +5,13 @@ import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
 import com.jme3.scene.Spatial;
 
-public class ModeRenderer {//ModeRenderer Class declare
+public class ModelRenderer {//ModeRenderer Class declare
 	AssetManager assetManager=new AssetManager();//AssetManager obj declare
 	Spatial spatial=assetManager.loadModel("Models/home.j3e"); //Loading Model 
 	Material mat=new Material(assetManager,"Lighting.j3d");//Material Obj declare
+	public String setModel(Model model) {//fetching Model
+		return ModelRenderer.findAll(model);//Printing Model
+	}
 	public String getModel(Model model) {//fetching Model
 		return model;//Printing Model
 	}
