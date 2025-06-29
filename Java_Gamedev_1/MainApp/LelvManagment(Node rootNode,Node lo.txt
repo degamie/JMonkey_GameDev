@@ -1,0 +1,5 @@
+LelvManagment(Node rootNode,Node localRootNode,ArrayList<LevelManagingClass>lvlMngmt,int lvl){
+	this.rootNode=rootNode;
+this.localrootNode=localrootNode;
+this.lvlMngmt=lvlMngmt;
+this.lvl=lvl;
