@@ -4,6 +4,12 @@ import com.jme3.math.ColorRGBA;
 import com.jme3.math.Vector3f;
 
 public class DirectionalLight {//DirectionalLight Class Declare
+	DirectionalLight(RootNode rootNode,DirectionalLight sun,Vector3 SunDirection,LightColor lightColor){
+		this.rootNode=rootNode;
+		this.sun=sun;
+		this.SunDirection=SunDirection;
+		this.lightColor=lightColor;
+	}
 	RootNode rootNode=new RootNode();//Obj Declare
 	DirectionalLight sun=new DirectionalLight(sun);//DirectionalLight's Obj Declare
 	Vector3 SunDirection=sun.setDirection(new Vector3f(1,0,-2).normalizeLocal());//setDirection Sunlight's Dire
