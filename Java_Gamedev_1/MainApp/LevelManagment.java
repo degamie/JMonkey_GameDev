@@ -3,8 +3,18 @@ package MainApp;
 import com.jme3.app.SimpleApplication;
 
 public class LevelManagment extends SimpleApplication {
+	ArrayList<LevelManagingClass>lvlMngmt=new ArrayList<>();
+	lvlMngmt.add(lvel1);
+	lvlMngmt.add(lvel2);
+	lvlMngmt.add(lvel3);
+	lvlMngmt.add(lvel4);
+	lvlMngmt.add(lvel5);
 	public final Node rootNode;
+	public String getrootNode(Node rootNode) {
+		return lvlMngmt.saveAll(rootNode);//rootNode's Fetching
+	}
 	public Node localRootNode;
+	
 	LevelvManagment (Node rootNode,Node localRootNode,ArrayList<LevelManagingClass>lvlMngmt,int lvl){
 //Param Constr
 		this.rootNode=rootNode;//Binding RootNode
@@ -12,12 +22,7 @@ public class LevelManagment extends SimpleApplication {
 	this.lvlMngmt=lvlMngmt;//LvlMngmt Binding
 	this.lvl=lvl;//Binding lvl
 	}
-	ArrayList<LevelManagingClass>lvlMngmt=new ArrayList<>();
-	lvlMngmt.add(lvel1);
-	lvlMngmt.add(lvel2);
-	lvlMngmt.add(lvel3);
-	lvlMngmt.add(lvel4);
-	lvlMngmt.add(lvel5);
+
 	int lvl=0;
 	lvlMngmt.get(lvl).load();
 	public String setLvel(int lvl) {//binding Level
