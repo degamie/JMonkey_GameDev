@@ -1,7 +1,11 @@
+
 package MainApp;
 
 public class Audio {//Class Declare
 	public Audio audio;//Audio Obj declare
+	public Audio(Audio audio) {
+		this.audio=audio;
+	}
 	public String getAudio(Audio audio) {
 		return audio;
 	}
