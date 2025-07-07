@@ -1,25 +1,20 @@
 package Light;
 
-import com.jme3.math.ColorRGBA;
-import com.jme3.math.Vector3f;
-
 public class DirectionalLight {//DirectionalLight Class Declare
-	DirectionalLight(RootNode rootNode,DirectionalLight sun,Vector3 SunDirection,LightColor lightColor){
+	RootNode rootNode=new RootNode();//Obj Declare
+	DirectionalLight sun=new DirectionalLight(rootNode, sun);//DirectionalLight's Obj Declare
+	DirectionalLight(RootNode rootNode,DirectionalLight sun){//param Constructor
 		this.rootNode=rootNode;
 		this.sun=sun;
-		this.SunDirection=SunDirection;
-		this.lightColor=lightColor;
 	}
-	RootNode rootNode=new RootNode();//Obj Declare
-	DirectionalLight sun=new DirectionalLight(sun);//DirectionalLight's Obj Declare
-	Vector3 SunDirection=sun.setDirection(new Vector3f(1,0,-2).normalizeLocal());//setDirection Sunlight's Dire
-	LightColor lightColor=sun.setColor(ColorRGBA.Orange);//Sun Color Declare
-	public String getDirectionalLightColor(LightColor lightColor) {
-		return lightColor;
-	}
+	
+	sun.setDirection(new Vector3f(1,0,-2).normalizeLocal());//setDirection Sunlight's Dire
+	//Implemented(07/07/2025)
+	sun.getColor(ColorRGBA.Yellow);//Sun Color's Fetch
+	
+	sun.setColor(ColorRGBA.Orange);//Sun Color Declare
+
 	rootNode.addingLight(sun);//Adding Light to Sun
-	public getSunDirection(DirectionalLight sun,sun.normalizeLocal()) {return SunDirection;}//Fething SunDirection
-	public DirectionalLight(DirectionalLight sun) {
-		this.sun=sun;
-	}
+	
+	
 }
