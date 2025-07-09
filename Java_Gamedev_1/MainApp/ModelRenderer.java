@@ -18,6 +18,9 @@ public class ModelRenderer {//ModeRenderer Class declare
 	public String getMaterial(Material mat) {//fetching Material
 		return mat;
 	}
+	public String setMaterial(AssetManager assetManager,Material mat) {
+		return assetManager.findAll(mat);//binding Material in AssetManager
+	}
 
 	mat.setBoolean("UserMaterial Colors",true);//Setting Boolean Expression
 	ColorRGBA BlueColor=mat.setColor("Ambient"ColorRGBA.Blue);//Setting The Material's Col
