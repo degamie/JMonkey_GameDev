@@ -15,7 +15,7 @@ public class LevelManagment extends SimpleApplication {
 	}
 	public Node localRootNode;
 	public String setLocalRootNode(ArrayList<LevelManagingClass>lvlMngmt,Node localrootNode){
-		return lvlMngmt.findAll(localrootNode);//binding LocalRootNode in Level
+		return lvlMngmt.findAll(localrootNode);//binding LocalRootNode in Level#1
 	}
 	public String getLocalRootNOde(ArrayList<LevelManagingClass>lvlMngmt,Node localrootNode) {
 		return lvlMngmt.saveAll(localrootNode);

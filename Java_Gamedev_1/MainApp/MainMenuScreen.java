@@ -22,7 +22,9 @@ public class MainMenuScreen extends SimpleApplication {
 			b.setText("Show Menu");
 	}
 			screen.addElement(b);
-	
+	public String getScreen(Screen screen,String indx) {
+		return screen.saveAll(indx);
+	}
 
 	@Override
 	public void simpleInitApp() {
