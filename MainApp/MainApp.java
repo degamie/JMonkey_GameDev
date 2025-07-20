@@ -18,33 +18,14 @@ import com.jme3.scene.Mesh;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
-public class MainApp extends SimpleApplication implements Settings{//inherting SimpleApplication
+public class MainApp extends SimpleApplication implements numMulDiv{//inherting SimpleApplication
 	public String LineWidth;
 	public Renderer rendererstate;//RenderState Declare
 	public Mesh mesh;//mesh obj Declare
 		return renderState.BlendMode(mesh);//printing Mesh's RenderState
-		public String getRendererState(Renderer rendererstate) {return rendererState;}//Fetching RendererState
-		public void setRendererState(Renderer rendererstate) {
-			this.rendererstate=rendererState;
-		}
-		@Override
-		public String onPlayAudio(Audio audio){
-			int vol=0;
-			if(!audio.onStart())return;
-			while(vol!=0){
-				else if(vol>0){
-					vol+=audio.playAudio();
-
-				}else vol=0;
-			}return vol;
-		}	
-	
 	
 	public MainApp() {//Default Constructor Declare within its Param
 		this(new statsAppState(),new FlyCamAppState(),new AudioListenerState(),new AppState(),new ConstantVerifierState());
-	}
-	public String getLineWidth(String LineWidth) {
-		return LineWidth;
 	}
 	public void setLineWidth(String LineWidth) {
 		this.LineWidth=LineWidth;
