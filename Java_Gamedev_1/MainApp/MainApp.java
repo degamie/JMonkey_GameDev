@@ -18,7 +18,7 @@ import com.jme3.scene.Mesh;
 import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
-public class MainApp extends SimpleApplication{//inherting SimpleApplication
+public class MainApp extends SimpleApplication implements numMulDiv{//inherting SimpleApplication
 	public String LineWidth;
 	public Renderer rendererstate;//RenderState Declare
 	public Mesh mesh;//mesh obj Declare

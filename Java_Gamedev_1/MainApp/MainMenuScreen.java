@@ -31,4 +31,7 @@ public class MainMenuScreen extends SimpleApplication {
 		// TODO Auto-generated method stub
 		
 	}}
+public class MainMenuScreen extends MainApp implements numMulDiv{
+	public MainMenuScreen mainmenuscreen=new MainMenuScreen();
+}
 //extends SimpleAp

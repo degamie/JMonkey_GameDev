@@ -3,6 +3,7 @@ package MainApp;
 import com.jme3.scene.plugins.ogre.SceneLoader;
 
 public class ScenePerformer extends MainApp {
+	public ScenePerformer scenePerformer;
 	ScenePerformer( SceneLoader scenePerformer){
 		this.scenePerformer=scenePerformer;
 	}
