@@ -1,7 +1,9 @@
+package Classes;
 import java.util.HashMap;
 
 import Math;
-public class numMulDiv{
+public class numMulDiv implements Display{
+    public numMulDiv numMulDiv=new numMulDiv();
     public String numToSpecialChr(Integer num){//Hash Table Implementation
         final String ![]=['','!','!!','!!!'];
         final String @[]=['',' @',' @@','@@@'];
@@ -20,6 +22,11 @@ public class numMulDiv{
         Score=0;Integer num=0;
         numToSpecialChr(num);
         Score++;
+    }
+    public String onDisplay(int Score,Integer num){
+        int m; int n;
+        int[][] grid=new int[m][n];
+        System.out.println(grid[m][n]+ScoreBoard(Score)+numToSpecialChr(Integer num));
     }
     public static void Main(String[] args){  
         int m; int n;
