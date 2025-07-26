@@ -1,6 +1,5 @@
 package Classes;
 import java.util.HashMap;
-
 import Math;
 public class numMulDiv implements Display{
     public numMulDiv numMulDiv=new numMulDiv();
@@ -29,6 +28,7 @@ public class numMulDiv implements Display{
         System.out.println(grid[m][n]+ScoreBoard(Score)+numToSpecialChr(Integer num));
     }
     public static void Main(String[] args){  
+        int num=0;int Score=0;
         int m; int n;
         int[][] grid=new int[m][n];
         HashMap<Integer>hmap=new HashMap<>();
@@ -61,6 +61,8 @@ public class numMulDiv implements Display{
             }
             return score;
         }
-        
-    }
+        numToSpecialChr(num);
+   ScoreBoard(Score);
+    onDisplay(score,num);
+     }
 }
