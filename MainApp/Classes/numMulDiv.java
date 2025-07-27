@@ -27,6 +27,22 @@ public class numMulDiv implements Display{
         int[][] grid=new int[m][n];
         System.out.println(grid[m][n]+ScoreBoard(Score)+numToSpecialChr(Integer num));
     }
+    public String onPattern(int Score,Integer num){
+        int m; int n;
+        int[][] grid=new int[m][n];
+        int out=0;
+        numToSpecialChr(num);
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid[0].length;j++){
+                if(grid[i][j]==0)return;
+                else if(grid[i]==[j] || grid[j]==[j+1] || grid[j]==[j-1] ||grid[i]==[i+1]){
+                    Score=  numToSpecialChr(num)+onDisplay(Score,num);
+                }
+                else Score=0;
+            
+        }
+        }return Score;
+    }
     public static void Main(String[] args){  
         int num=0;int Score=0;
         int m; int n;
