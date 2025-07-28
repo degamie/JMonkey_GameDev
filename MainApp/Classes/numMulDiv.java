@@ -77,8 +77,6 @@ public class numMulDiv implements Display{
             }
             return score;
         }
-        numToSpecialChr(num);
-   ScoreBoard(Score);
-    onDisplay(score,num);
+        onDisplay(numToSpecialChr(num),Score,num,(onPattern(Score,num)),ScoreBoard(Score));//Displaying NumToSpecialChar's Patternic ScoreBoard's Methods
      }
 }
